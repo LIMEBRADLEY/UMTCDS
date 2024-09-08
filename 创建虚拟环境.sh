@@ -1,0 +1,1 @@
+conda create --name UMTCDS python=3.10.12

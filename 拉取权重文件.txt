@@ -1,0 +1,19 @@
+# 创建虚拟环境 (Create a virtual environment)
+# 替换 YOUR_ENV_NAME 为您想要的环境名
+conda create --name YOUR_ENV_NAME python=3.10.12
+
+# 激活虚拟环境 (Activate the virtual environment)
+source activate YOUR_ENV_NAME
+
+# 安装依赖 (Install dependencies)
+# 如果您有依赖文件如 requirements.txt
+pip install -r requirements.txt
+
+#拉去GLM-4-9B-Chat权重文件
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+sudo apt-get install git-lfs
+git lfs install
+
+git clone https://huggingface.co/THUDM/glm-4-9b-chat
+or
+git clone https://www.modelscope.cn/ZhipuAI/glm-4-9b-chat.git
